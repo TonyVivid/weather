@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2495d1"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="mg.studio.weather.MainActivity">
+
+    <TextView
+        android:id="@+id/weekday"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Sunday"
+        android:textAllCaps="true"
+        android:textColor="#111111"
+        android:textSize="36sp"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:textStyle="bold" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:srcCompat="@drawable/notification"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekday"
+        />
+    <TextView
+        android:id="@+id/tv_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:text="You have 1 appointment"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_selector"
+        android:gravity="center"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Go to Calendar"
+        android:textColor="#50ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_news" />
+
+    <ImageView
+        android:id="@+id/img_weather_condition"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:srcCompat="@drawable/rainy_up" />
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Location"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/img_weather_condition"
+        app:layout_constraintRight_toRightOf="@id/img_weather_condition"
+        app:layout_constraintTop_toBottomOf="@id/img_weather_condition"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03/03/2018"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="@id/img_weather_condition"
+        app:layout_constraintRight_toRightOf="@id/img_weather_condition"
+        app:layout_constraintTop_toBottomOf="@id/tv_location"/>
+
+    <TextView
+        android:id="@+id/T"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="204dp"
+        android:layout_marginTop="52dp"
+        android:text="18"
+        android:textColor="@android:color/white"
+        android:textSize="100sp"
+        android:textStyle="bold"
+
+        app:layout_constraintLeft_toLeftOf="@id/img_weather_condition"
+        app:layout_constraintTop_toBottomOf="@id/button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="°C"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="@id/T"
+        app:layout_constraintLeft_toRightOf="@id/T"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp"
+        />
+    <ImageView
+        android:id="@+id/whiteImg"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/design"
+        app:layout_constraintTop_toBottomOf="@id/T"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cs_layout"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/whiteImg"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <ImageView
+            android:id="@+id/first_weather"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cs_layout"
+            app:srcCompat="@drawable/rainy_small" />
+
+        <TextView
+            android:id="@+id/first_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="mon"
+            android:textAllCaps="true"
+            android:textColor="#909090"
+            app:layout_constraintTop_toBottomOf="@id/first_weather"
+            app:layout_constraintLeft_toLeftOf="@id/first_weather"
+            app:layout_constraintRight_toRightOf="@id/first_weather"
+            />
+        <ImageView
+            android:id="@+id/second_weather"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/partly_sunny_small"
+            app:layout_constraintTop_toTopOf="@id/cs_layout"
+            app:layout_constraintLeft_toRightOf="@id/first_weather"
+            android:layout_marginLeft="40dp"
+
+            />
+
+        <TextView
+            android:id="@+id/second_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="tue"
+            android:textAllCaps="true"
+            android:textColor="#909090"
+            app:layout_constraintTop_toBottomOf="@id/second_weather"
+            app:layout_constraintLeft_toLeftOf="@id/second_weather"
+            app:layout_constraintRight_toRightOf="@id/second_weather"
+            app:layout_constraintBaseline_toBaselineOf="@id/first_day"/>
+        <ImageView
+            android:id="@+id/third_weather"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/windy_small"
+            app:layout_constraintTop_toTopOf="@id/cs_layout"
+            app:layout_constraintLeft_toRightOf="@id/second_weather"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/third_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="thu"
+            android:textAllCaps="true"
+            android:textColor="#909090"
+            app:layout_constraintTop_toBottomOf="@id/third_weather"
+            app:layout_constraintLeft_toLeftOf="@id/third_weather"
+            app:layout_constraintRight_toRightOf="@id/third_weather"
+            app:layout_constraintBaseline_toBaselineOf="@id/first_day"/>
+
+        <ImageView
+            android:id="@+id/fourth_weather"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/sunny_small"
+            app:layout_constraintTop_toTopOf="@id/cs_layout"
+            app:layout_constraintLeft_toRightOf="@id/third_weather"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"/>
+
+        <TextView
+            android:id="@+id/fourth_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="fri"
+            android:textAllCaps="true"
+            android:textColor="#909090"
+            app:layout_constraintTop_toBottomOf="@id/fourth_weather"
+            app:layout_constraintLeft_toLeftOf="@id/fourth_weather"
+            app:layout_constraintRight_toRightOf="@id/fourth_weather"
+            app:layout_constraintBaseline_toBaselineOf="@id/first_day"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
